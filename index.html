@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="spain.png" type="image/x-icon">
+    <title>Spain Club</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=crowdsource" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- VIDEO DE FONDO -->
+    <section class="video">
+        <video autoplay muted loop playsinline preload="auto" id="bg-video">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        <div class="overlay">
+            <h2>Bienvenido al servidor más gamer de Discord</h2>
+            <a href="https://discord.gg/7gu9jEDv8H" class="discord-btn" target="_blank">🚀 Unirse al Discord</a>
+        </div>
+    </section>
+
+    <!-- NORMAS -->
+
+    <main class="normas">
+        <h2>📜 Normas del Servidor</h2>
+        <ul>
+            <li>Respeta a todos los miembros sin importar edad, género, raza, religión o nacionalidad.</li>
+            <li>No insultes, humilles ni acoses a otros miembros.</li>
+            <li>Evita discusiones innecesarias o provocaciones.</li>
+            <li>No se permiten amenazas o comportamientos violentos.</li>
+            <li>No publicar contenido sexual explícito, pornografía ni material NSFW.</li>
+            <li>No compartir contenido violento extremo o gore.</li>
+            <li>No publicar imágenes, videos o enlaces ilegales.</li>
+            <li>No usar nombres, apodos o avatares ofensivos o racistas.</li>
+            <li><a class="bt" href="normas.html">Leer más...</a></li>
+        </ul>
+
+        <br>
+        <br>
+
+        <h2>🔥 Comunidad 🔥</h2>
+
+        <hr>
+
+        <br>
+        <br>
+              <p>
+        Bienvenido al apartado de foro de nuestra <a class="bt" href="#">Comunidad</a>, 
+        donde podrás descubrir directos, podcasts y todo tipo de temas relacionados con el gaming y los videojuegos.
+            </p>
+
+        
+
+        <br>
+        <br>
+        
+        
+        <hr>
+
+
+        <br>
+        <br>
+
+        <a href="" class="discord-btn" target="_blank">Explorar la Comunidad</a>
+
+        <br>
+        <br>
+    </main>
+
+    <!-- SECCIÓN DE JUEGOS -->
+    <section class="juegos">
+
+        
+
+        <div class="juego left">
+            <img src="https://gaming-cdn.com/images/products/9456/screenshot/league-of-legends-pc-juego-wallpaper-1.jpg?v=1747212286" alt="League of Legends">
+            <div class="descripcion">
+                <h3>League of Legends</h3>
+                <p>Batallas estratégicas 5v5 donde la habilidad y el trabajo en equipo deciden la victoria.</p>
+            </div>
+        </div>
+
+        <div class="juego right">
+            <img src="https://www.nme.com/wp-content/uploads/2021/08/Minecraft@2000x1270-696x442.jpg" alt="Minecraft">
+            <div class="descripcion">
+                <h3>Minecraft</h3>
+                <p>Crea, explora y sobrevive en mundos infinitos llenos de bloques y aventuras.</p>
+            </div>
+        </div>
+
+        <div class="juego left">
+            <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/ss_0f8cf82d019c614760fd20801f2bb4001da7ea77.600x338.jpg?t=1749053861" alt="Counter-Strike 2">
+            <div class="descripcion">
+                <h3>Counter-Strike 2</h3>
+                <p>Precisión, reflejos y táctica en el shooter más competitivo del mundo.</p>
+            </div>
+        </div>
+
+        <div class="juego right">
+            <img src="https://img.game8.co/4065892/b8d14a76ec3d584651efc820b34edb46.png/show" alt="Valorant">
+            <div class="descripcion">
+                <h3>Valorant</h3>
+                <p>Combina puntería precisa con habilidades únicas en intensos enfrentamientos 5v5.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 ESPAÑITA CLUB | Síguenos en <a href="https://discord.gg/7gu9jEDv8H">Discord</a></p>
+    </footer>
+
+    <!-- JS ANIMACIÓN -->
+    <script>
+        const juegos = document.querySelectorAll('.juego');
+
+        function mostrarJuegos() {
+            const triggerBottom = window.innerHeight / 5 * 4;
+
+            juegos.forEach(juego => {
+                const juegoTop = juego.getBoundingClientRect().top;
+
+                if(juegoTop < triggerBottom){
+                    juego.classList.add('show');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', mostrarJuegos);
+        mostrarJuegos();
+    </script>
+</body>
+</html>
